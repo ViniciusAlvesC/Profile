@@ -1,0 +1,27 @@
+footer {
+  background: #fff;
+  margin-top: 70px;
+}
+
+.footer {
+  padding: 35px;
+}
+
+.footer_config {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_config p {
+  font-weight: 500;
+}
+
+.icons i {
+    font-size: 1.5em;
+    color: #1e1e1e;
+    margin-right: 15px;
+}
+
+.heart {
+    color: red;
+}

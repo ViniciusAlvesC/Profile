@@ -1,0 +1,47 @@
+.logo {
+  width: 110px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h1 {
+  font-weight: 300;
+  font-size: 1.8em;
+  color: #313131;
+}
+
+.nav_items li a {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+header {
+  padding: 30px 10%;
+  background: #ffffff;
+  -webkit-box-shadow: 0 7px 15px -4px rgba(206, 206, 206, 1);
+  -moz-box-shadow: 0 7px 15px -4px rgba(206, 206, 206, 1);
+  box-shadow: 0 7px 15px -4px rgb(206, 206, 206);
+}
+
+nav li {
+  display: inline-block;
+  padding: 0px 15px;
+}
+
+nav li a {
+  color: #313131;
+}
+
+nav ul li a {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1em;
+}
+
+header nav {
+  list-style: none;
+}
