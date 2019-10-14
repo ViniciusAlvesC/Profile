@@ -1,6 +1,8 @@
 import React from "react";
 import "./InfoCard.css";
 
+
+
 const infoCard = () => {
   return (
     <div className="container">
