@@ -18,6 +18,7 @@ const infoCard = () => {
     <Container>
       <Card>
         <CardBackground height={350} img={infoCardBackground}>
+          
         </CardBackground>
 
         <CardInfo>

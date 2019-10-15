@@ -3,13 +3,14 @@ import {
   Container,
   Card,
   CardBackground,
+  Overlay,
   CardInfo,
   Name,
   PersonalInfo,
   Description,
   IconGroup
 } from "./Styles";
-import designCardBackground from "../assets/bgDesign.png";
+import designCardBackground from "../assets/profileBg.svg";
 
 function Design() {
   return (
