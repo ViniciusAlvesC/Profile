@@ -1,23 +1,21 @@
 import React from "react";
-import { Container, Head, Navbar, NavItem, MyNav } from "./Styles";
-import logo from "../assets/logodefm.svg";
+import { Container, Head, Navbar, NavItem } from "./Styles";
+import logo from "../assets/logodef.svg";
 
 const Nav = () => {
   return (
     <Head>
       <Container>
         <Navbar>
-          <img src={logo} alt="" style={{width: `${110}px`}} />
-          <MyNav>
-            <NavItem>
-              <li>
-                <a href="/">Repositories</a>
-              </li>
-              <li>
-                <a href="/">Design</a>
-              </li>
-            </NavItem>
-          </MyNav>
+          <img src={logo} alt="" style={{ width: `${110}px` }} />
+          <NavItem>
+            <li>
+              <a href="/">Repositories</a>
+            </li>
+            <li>
+              <a href="/">Design</a>
+            </li>
+          </NavItem>
         </Navbar>
       </Container>
     </Head>

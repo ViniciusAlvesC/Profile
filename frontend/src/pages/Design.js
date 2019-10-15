@@ -3,23 +3,19 @@ import {
   Container,
   Card,
   CardBackground,
-  Overlay,
   CardInfo,
   Name,
   PersonalInfo,
   Description,
   IconGroup
 } from "./Styles";
-import designCardBackground from "../assets/bg.jpg";
-
-// import { Container } from './styles';
+import designCardBackground from "../assets/bgDesign.png";
 
 function Design() {
   return (
     <Container>
       <Card>
-        <CardBackground img={designCardBackground} height={200}>
-          <Overlay height={200}></Overlay>
+        <CardBackground img={designCardBackground} height={350}>
         </CardBackground>
 
         <CardInfo>
@@ -30,7 +26,7 @@ function Design() {
               <span>Meus Projetos de design</span>
             </PersonalInfo>
 
-            <Description>
+            <Description tamanho={440}>
               Experiência com o pacote Adobe (Photoshop, Illustrator, Adobe XD,
               After Effects e Premiere), conhecimento básico em Gimp e Figma,
               você pode ver todos meus projetos clicando no icone do Behance ali

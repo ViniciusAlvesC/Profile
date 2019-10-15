@@ -1,5 +1,17 @@
 import styled from "styled-components";
 
+const cssVariables = {
+  textColor: "#1e1e1e",
+  cardShadow: "0 10px 15px 0 rgba(206, 206, 206, 0.6)",
+  cardShadowHover: "0 18px 25px 0 rgb(197, 197, 197)",
+  white: "#fdfdff",
+  titleSize: "1.3em",
+  navItemSize: "1.1em",
+  cardGradient: `transparent linear-gradient(180deg, #29c6e2 0%, #0077c7 100%) 0%
+  0% no-repeat padding-box;`,
+  overlayColor: "rgba(0, 0, 0, 0.2)"
+};
+
 //Utilitys
 
 export const Flex = styled.div`
@@ -18,14 +30,14 @@ export const FlexBetween = styled.div`
 
 export const Heart = styled.span`
   i {
-    color: red;
+    color: #ff4848;
   }
 `;
 
 export const Icons = styled.div`
   i {
     font-size: 1.5em;
-    color: #1e1e1e;
+    color: ${cssVariables.textColor};
     margin-right: 15px;
   }
 `;
@@ -42,9 +54,7 @@ export const Container = styled.div`
 
 export const Head = styled.header`
   padding: 30px 10%;
-  background: #ffffff;
-  -webkit-box-shadow: 0 7px 15px -4px rgba(206, 206, 206, 1);
-  -moz-box-shadow: 0 7px 15px -4px rgba(206, 206, 206, 1);
+  background: ${cssVariables.white};
   box-shadow: 0 7px 15px -4px rgb(206, 206, 206);
 `;
 
@@ -54,23 +64,16 @@ export const Navbar = styled.div`
   align-items: center;
 `;
 
-export const MyNav = styled.div`
+export const NavItem = styled.ul`
   li {
     display: inline-block;
     padding: 0px 20px;
   }
-
-  li a {
-    color: #313131;
-    font-family: "Roboto", sans-serif;
-    font-size: 1.2em;
-  }
-`;
-
-export const NavItem = styled.ul`
   li a {
     font-weight: 500;
-    font-size: 1.1em;
+    color: ${cssVariables.textColor};
+    font-family: "Roboto", sans-serif;
+    font-size: ${cssVariables.navItemSize};
   }
 `;
 
@@ -78,7 +81,7 @@ export const NavItem = styled.ul`
 
 export const Card = styled.div`
   margin-top: 50px;
-  background: #fff;
+  background: ${cssVariables.white};
   border-radius: 8px;
   box-shadow: 0 10px 15px 0 rgba(206, 206, 206, 0.6);
 `;
@@ -93,7 +96,7 @@ export const CardBackground = styled.div`
 `;
 
 export const Overlay = styled.div`
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: ${cssVariables.overlayColor};
   background-size: 100%;
   height: ${props => `${props.height}px`};
   border-radius: 10px 10px 0px 0px;
@@ -107,8 +110,8 @@ export const CardInfo = styled.div`
 
 export const Name = styled.p`
   font-weight: bold;
-  font-size: 1.3em;
-  color: #1e1e1e;
+  font-size: ${cssVariables.titleSize};
+  color: ${cssVariables.textColor};
 `;
 
 export const PersonalInfo = styled.div`
@@ -121,7 +124,7 @@ export const PersonalInfo = styled.div`
 
 export const Description = styled.p`
   font-family: "Roboto", sans-serif;
-  max-width: 350px;
+  max-width: ${props => `${props.tamanho}px`};
 `;
 
 export const IconGroup = styled.div`
@@ -130,14 +133,14 @@ export const IconGroup = styled.div`
   i {
     font-size: 1.4em;
     margin: 8px 0 0 8px;
-    color: #1e1e1e;
+    color: ${cssVariables.textColor};
   }
 
   p {
     font-weight: bold;
     font-size: 0.96em;
     text-align: end;
-    color: #1e1e1e;
+    color: ${cssVariables.textColor};
   }
 `;
 
@@ -162,7 +165,7 @@ export const SearchInput = styled.div`
 export const SearchIcon = styled.div`
   i {
     padding: 15px;
-    background: #fff;
+    background: ${cssVariables.white};
     border-radius: 5px 0px 0px 5px;
   }
 `;
@@ -176,33 +179,32 @@ export const CustomRepositories = styled.div`
 `;
 
 export const Repositorie = styled.div`
-  background-color: #fff;
+  background-color: ${cssVariables.white};
   border-radius: 8px;
-  box-shadow: 0 10px 15px 0 rgba(206, 206, 206, 0.6);
+  box-shadow: ${cssVariables.cardShadow};
   transition: all 0.35s ease;
   height: 420px;
   overflow: hidden;
 
   &:hover {
-    box-shadow: 0 18px 25px 0 rgb(197, 197, 197);
+    box-shadow: ${cssVariables.cardShadowHover};
   }
 
   h3 {
-    color: #1e1e1e;
+    color: ${cssVariables.textColor};
     font-weight: 700;
   }
 `;
 
 export const RepositorieBackground = styled.div`
-  background: transparent linear-gradient(180deg, #29c6e2 0%, #0077c7 100%) 0%
-    0% no-repeat padding-box;
+  background: ${cssVariables.cardGradient};
   height: 170px;
   border-radius: 8px 8px 0px 0px;
 `;
 
 export const RepoTitle = styled.h3`
   font-family: "Poppins", sans-serif;
-  font-size: 1.2em;
+  font-size: ${cssVariables.titleSize};
 `;
 
 export const RepoInfo = styled.div`
@@ -231,7 +233,7 @@ export const Tag = styled.span`
 //Footer
 
 export const MyFooter = styled.footer`
-  background: #fff;
+  background: ${cssVariables.white};
   margin-top: 70px;
   padding: 35px;
 `;

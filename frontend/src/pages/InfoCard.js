@@ -4,7 +4,6 @@ import {
   Card,
   CardInfo,
   CardBackground,
-  Overlay,
   Name,
   FlexColumn,
   Flex,
@@ -12,14 +11,13 @@ import {
   Description,
   IconGroup
 } from "./Styles";
-import infoCardBackground from "../assets/bg.jpg";
+import infoCardBackground from "../assets/bgProfile.png";
 
 const infoCard = () => {
   return (
     <Container>
       <Card>
-        <CardBackground height={250} img={infoCardBackground}>
-          <Overlay height={250}></Overlay>
+        <CardBackground height={350} img={infoCardBackground}>
         </CardBackground>
 
         <CardInfo>
@@ -31,7 +29,7 @@ const infoCard = () => {
                 <span>20 anos - 06/08/1999</span>
                 <span>Ciência da computação</span>
               </PersonalInfo>
-              <Description>
+              <Description tamanho={350}>
                 Cerca de 1 ano experiencia em Desenvolvimento Web, utilizando
                 das mais novas tecnologias do mercado (React, Nodejs, Go,
                 MongoDB, etc..), cursando Ciência da computação (UniCEUB),

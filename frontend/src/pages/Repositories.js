@@ -25,21 +25,20 @@ function Repositories() {
     const response = await Axios.get(
       "https://api.github.com/users/ViniciusAlvesC/repos"
     );
-    const newRepo = [];
+    const repos = [];
     response.data.map(repo => {
-      return newRepo.push(repo);
+      return repos.push(repo);
     });
 
     setRepo({
-      repos: newRepo
+      repos: repos
     });
   };
 
   const renderCards = () => {
     const cards = repo.repos.map(repo => {
-
       if (repo.language === "HTML") {
-        repo.language = "HTML & CSS"
+        repo.language = "HTML & CSS";
       }
 
       return (

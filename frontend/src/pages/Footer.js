@@ -1,8 +1,6 @@
 import React from "react";
 import { Container, MyFooter, FlexBetween, Heart, Icons } from "./Styles";
 
-// import { Container } from './styles';
-
 function Footer() {
   return (
     <MyFooter>
