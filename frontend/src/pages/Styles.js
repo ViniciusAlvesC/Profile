@@ -211,12 +211,12 @@ export const RepoInfo = styled.div`
 
 export const RepoDesc = styled.p`
   font-family: "Roboto", sans-serif;
-  margin-top: 20px;
+  margin-top: 15px;
   font-weight: 400;
 `;
 
 export const Tags = styled.div`
-  margin: 5px 0 15px 0;
+  margin: 5px 0 0 0;
 `;
 
 export const Tag = styled.span`
