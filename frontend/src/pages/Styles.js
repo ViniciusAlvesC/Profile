@@ -80,7 +80,7 @@ export const NavItem = styled.ul`
 export const Card = styled.div`
   margin-top: 50px;
   background: #fff;
-  border-radius: 10px;
+  border-radius: 8px;
   box-shadow: 0 10px 15px 0 rgba(206, 206, 206, 0.6);
 `;
 
@@ -90,7 +90,7 @@ export const CardBackground = styled.div`
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 8px 8px 0px 0px;
 `;
 
 export const Overlay = styled.div`
@@ -178,7 +178,7 @@ export const CustomRepositories = styled.div`
 
 export const Repositorie = styled.div`
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 8px;
   box-shadow: 0 10px 15px 0 rgba(206, 206, 206, 0.6);
   transition: all 0.35s ease;
   height: 420px;
@@ -197,9 +197,7 @@ export const Repositorie = styled.div`
 export const RepositorieBackground = styled.div`
   background: ${props => `${props.gradient}`};
   height: 170px;
-  border-radius: 10px 10px 0px 0px;
-  -moz-border-radius: 10px 10px 0px 0px;
-  -webkit-border-radius: 10px 10px 0px 0px;
+  border-radius: 8px 8px 0px 0px;
 `;
 
 export const RepoTitle = styled.h3`

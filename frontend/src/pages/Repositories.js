@@ -43,12 +43,13 @@ function Repositories() {
       if (repo.language === "JavaScript") {
         color = "#ffbd2fff";
         gradient =
-          "transparent linear-gradient(180deg, #ffbd2fff 0%, #ffd837ff 100%) 0% 0% no-repeat padding-box;";
+          "transparent linear-gradient(180deg, rgba(252,185,61,1) 0%, #ffd50cff 90%) 0% 0% no-repeat padding-box;";
       } else if (repo.language === "Go") {
         color = "#29c6e2";
         gradient =
           "transparent linear-gradient(180deg, #29C6E2 0%, #0077C7 100%) 0% 0% no-repeat padding-box;";
       } else if (repo.language === "HTML") {
+        repo.language = "HTML & CSS";
         color = "rgba(33,198,138,1)";
         gradient =
           "transparent linear-gradient(180deg, rgba(13,198,180,1) 8.1%, rgba(33,198,138,1) 79.5%) 0% 0% no-repeat padding-box;";
