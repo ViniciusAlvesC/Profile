@@ -1,23 +1,23 @@
 import React from "react";
-import "./Search.css"
+import { Container, SearchBar, SearchInput, SearchIcon } from "./Styles";
 
 const Search = () => {
   return (
-    <div className="container">
-      <form action="" className="search">
-        <div className="input_search">
-          <div className="search_icon">
+    <Container>
+      <SearchBar>
+        <SearchInput>
+          <SearchIcon>
             <i className="fas fa-search"></i>
-          </div>
+          </SearchIcon>
           <input
             type="text"
             name="repo"
             id="repo"
             placeholder="Search repositorie"
           />
-        </div>
-      </form>
-    </div>
+        </SearchInput>
+      </SearchBar>
+    </Container>
   );
 };
 

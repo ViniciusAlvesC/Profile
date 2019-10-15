@@ -1,37 +1,48 @@
 import React from "react";
-import "./InfoCard.css";
-
-
+import {
+  Container,
+  Card,
+  CardInfo,
+  CardBackground,
+  Overlay,
+  Name,
+  FlexColumn,
+  Flex,
+  PersonalInfo,
+  Description,
+  IconGroup
+} from "./Styles";
+import infoCardBackground from "../assets/bg.jpg";
 
 const infoCard = () => {
   return (
-    <div className="container">
-      <div className="main_card">
-        <div className="card_bg">
-          <div className="overlay"></div>
-        </div>
+    <Container>
+      <Card>
+        <CardBackground height={250} img={infoCardBackground}>
+          <Overlay height={250}></Overlay>
+        </CardBackground>
 
-        <div className="card_info">
+        <CardInfo>
           <div>
-            <p className="name">Vinícius Alves Coutinho</p>
-            <div className="generic_info">
-              <div className="basic_info">
+            <Name>Vinícius Alves Coutinho</Name>
+            <FlexColumn>
+              <PersonalInfo>
                 <span>Brasília, Distrito Federal, Brasil</span>
                 <span>20 anos - 06/08/1999</span>
                 <span>Ciência da computação</span>
-              </div>
-              <p className="description">
+              </PersonalInfo>
+              <Description>
                 Cerca de 1 ano experiencia em Desenvolvimento Web, utilizando
                 das mais novas tecnologias do mercado (React, Nodejs, Go,
                 MongoDB, etc..), cursando Ciência da computação (UniCEUB),
                 atualmente no 5º Semestre, em busca de um estágio ou uma vaga
                 como Desenvolvedor.
-              </p>
-            </div>
+              </Description>
+            </FlexColumn>
           </div>
 
-          <div className="icon_set">
-            <div className="icon">
+          <Flex>
+            <IconGroup>
               <p>Skills</p>
               <div>
                 <i className="fab fa-node-js"></i>
@@ -40,9 +51,9 @@ const infoCard = () => {
                 <i className="fab fa-css3-alt"></i>
                 <i className="fab fa-html5"></i>
               </div>
-            </div>
+            </IconGroup>
 
-            <div className="icon">
+            <IconGroup>
               <p>Social</p>
               <div>
                 <a
@@ -74,19 +85,19 @@ const infoCard = () => {
                   <i className="fab fa-twitter"></i>
                 </a>
               </div>
-            </div>
+            </IconGroup>
 
-            <div className="icon">
+            <IconGroup>
               <p>Others</p>
               <div>
                 <i className="fab fa-discord"></i>
-                <i class="fas fa-envelope"></i>
+                <i className="fas fa-envelope"></i>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+            </IconGroup>
+          </Flex>
+        </CardInfo>
+      </Card>
+    </Container>
   );
 };
 

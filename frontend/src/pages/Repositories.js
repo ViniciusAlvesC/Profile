@@ -1,5 +1,15 @@
 import React, { useState, useEffect } from "react";
-import "./Repositories.css";
+import {
+  Container,
+  CustomRepositories,
+  Repositorie,
+  RepositorieBackground,
+  RepoInfo,
+  RepoDesc,
+  RepoTitle,
+  Tags,
+  Tag
+} from "./Styles";
 import Axios from "axios";
 
 function Repositories() {
@@ -27,30 +37,40 @@ function Repositories() {
 
   const renderCards = () => {
     const cards = repo.repos.map(repo => {
+
+      let color = "";
+      if (repo.language === "JavaScript") {
+        color = "#FFCC41"
+      } else if (repo.language === "Go") {
+        color = "#29c6e2"
+      } else if (repo.language === "HTML") {
+        color = "#FF7010"
+      }
+
       return (
-        <div className="repositorie" key={repo.id}>
+        <Repositorie key={repo.id}>
           <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
-            <div className="repositorie_bg"></div>
+            <RepositorieBackground></RepositorieBackground>
           </a>
-          <div className="repo_info">
+          <RepoInfo>
             <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
-              <h3>{repo.name}</h3>
+              <RepoTitle>{repo.name}</RepoTitle>
             </a>
-            <div className="tags">
-              <span className="tag">{repo.language}</span>
-            </div>
-            <p className="repo_desc">{repo.description}</p>
-          </div>
-        </div>
+            <Tags>
+              <Tag color={color}>{repo.language}</Tag>
+            </Tags>
+            <RepoDesc>{repo.description}</RepoDesc>
+          </RepoInfo>
+        </Repositorie>
       );
     });
     return cards;
   };
 
   return (
-    <div className="container">
-      <div className="repositories">{renderCards()}</div>
-    </div>
+    <Container>
+      <CustomRepositories>{renderCards()}</CustomRepositories>
+    </Container>
   );
 }
 

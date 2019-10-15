@@ -1,27 +1,44 @@
 import React from "react";
-import "./Design.css";
+import {
+  Container,
+  Card,
+  CardBackground,
+  Overlay,
+  CardInfo,
+  Name,
+  PersonalInfo,
+  Description,
+  IconGroup
+} from "./Styles";
+import designCardBackground from "../assets/bg.jpg";
 
 // import { Container } from './styles';
 
 function Design() {
   return (
-    <div className="container">
-      <div className="main_card">
-        <div className="card_design_bg">
-          <div className="overlay_design"></div>
-        </div>
-        <div className="card_info">
-          <div className="design_info">
-            <p className="name">Design Projects</p>
-            <p className="description">
+    <Container>
+      <Card>
+        <CardBackground img={designCardBackground} height={200}>
+          <Overlay height={200}></Overlay>
+        </CardBackground>
+
+        <CardInfo>
+          <div>
+            <Name>Design Projects</Name>
+
+            <PersonalInfo>
+              <span>Meus Projetos de design</span>
+            </PersonalInfo>
+
+            <Description>
               Experiência com o pacote Adobe (Photoshop, Illustrator, Adobe XD,
               After Effects e Premiere), conhecimento básico em Gimp e Figma,
               você pode ver todos meus projetos clicando no icone do Behance ali
               do lado em Social!
-            </p>
+            </Description>
           </div>
 
-          <div className="icon">
+          <IconGroup>
             <p>Social</p>
             <a
               href="https://twitter.com/vini_alvesssss"
@@ -30,7 +47,7 @@ function Design() {
             >
               <i className="fab fa-twitter"></i>
             </a>
-            <i class="fab fa-adobe"></i>
+            <i className="fab fa-adobe"></i>
             <a
               href="https://www.linkedin.com/in/vin%C3%ADcius-alves-9b151715a/"
               target="_blank"
@@ -38,11 +55,11 @@ function Design() {
             >
               <i className="fab fa-linkedin"></i>
             </a>
-            <i class="fab fa-behance-square"></i>
-          </div>
-        </div>
-      </div>
-    </div>
+            <i className="fab fa-behance-square"></i>
+          </IconGroup>
+        </CardInfo>
+      </Card>
+    </Container>
   );
 }
 
