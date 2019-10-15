@@ -10,7 +10,7 @@ import {
   Description,
   IconGroup
 } from "./Styles";
-import designCardBackground from "../assets/profileBg.svg";
+import designCardBackground from "../assets/designBg.svg";
 
 function Design() {
   return (

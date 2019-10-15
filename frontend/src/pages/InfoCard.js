@@ -11,7 +11,7 @@ import {
   Description,
   IconGroup
 } from "./Styles";
-import infoCardBackground from "../assets/bgProfile.png";
+import infoCardBackground from "../assets/profileBg.svg";
 
 const infoCard = () => {
   return (

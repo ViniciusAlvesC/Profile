@@ -90,7 +90,7 @@ export const CardBackground = styled.div`
   background: url(${props => props.img});
   height: ${props => `${props.height}px`};
   background-position: center;
-  background-size: cover;
+  background-size: 120%;
   background-repeat: no-repeat;
   border-radius: 8px 8px 0px 0px;
 `;

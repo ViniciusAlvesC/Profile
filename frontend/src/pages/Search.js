@@ -9,6 +9,7 @@ const Search = () => {
           <SearchIcon>
             <i className="fas fa-search"></i>
           </SearchIcon>
+
           <input
             type="text"
             name="repo"
