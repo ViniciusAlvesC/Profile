@@ -16,7 +16,6 @@ function App() {
       <InfoCard />
       <Search />
       <Repositories />
-      <Design />
       <Footer />
     </>
   );

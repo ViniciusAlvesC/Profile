@@ -195,13 +195,14 @@ export const Repositorie = styled.div`
 `;
 
 export const RepositorieBackground = styled.div`
-  background: ${props => `${props.gradient}`};
+  background: transparent linear-gradient(180deg, #29c6e2 0%, #0077c7 100%) 0%
+    0% no-repeat padding-box;
   height: 170px;
   border-radius: 8px 8px 0px 0px;
 `;
 
 export const RepoTitle = styled.h3`
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.2em;
 `;
 
@@ -221,7 +222,7 @@ export const Tags = styled.div`
 
 export const Tag = styled.span`
   color: white;
-  background: ${props => `${props.color}`};
+  background: #5FD5E8;
   padding: 2px 15px;
   border-radius: 12px;
   font-size: 0.8em;
