@@ -195,8 +195,7 @@ export const Repositorie = styled.div`
 `;
 
 export const RepositorieBackground = styled.div`
-  background: transparent linear-gradient(180deg, #29c6e2 0%, #0077c7 100%) 0%
-    0% no-repeat padding-box;
+  background: ${props => `${props.gradient}`};
   height: 170px;
   border-radius: 10px 10px 0px 0px;
   -moz-border-radius: 10px 10px 0px 0px;
