@@ -37,6 +37,11 @@ function Repositories() {
 
   const renderCards = () => {
     const cards = repo.repos.map(repo => {
+
+      if (repo.language === "HTML") {
+        repo.language = "HTML & CSS"
+      }
+
       return (
         <Repositorie key={repo.id}>
           <a href={repo.html_url} target="_blank" rel="noopener noreferrer">

@@ -69,9 +69,8 @@ export const MyNav = styled.div`
 
 export const NavItem = styled.ul`
   li a {
-    text-transform: uppercase;
     font-weight: 500;
-    font-size: 1em;
+    font-size: 1.1em;
   }
 `;
 
@@ -222,7 +221,7 @@ export const Tags = styled.div`
 
 export const Tag = styled.span`
   color: white;
-  background: #5FD5E8;
+  background: #5fd5e8;
   padding: 2px 15px;
   border-radius: 12px;
   font-size: 0.8em;
