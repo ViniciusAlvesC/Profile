@@ -6,7 +6,7 @@ import {
   CardBackground,
   Name,
   FlexColumn,
-  Flex,
+  IconSet,
   PersonalInfo,
   Description,
   IconGroup
@@ -17,9 +17,7 @@ const infoCard = () => {
   return (
     <Container>
       <Card>
-        <CardBackground height={350} img={infoCardBackground}>
-          
-        </CardBackground>
+        <CardBackground height={350} img={infoCardBackground}></CardBackground>
 
         <CardInfo>
           <div>
@@ -30,7 +28,7 @@ const infoCard = () => {
                 <span>20 anos - 06/08/1999</span>
                 <span>Ciência da computação</span>
               </PersonalInfo>
-              <Description tamanho={350}>
+              <Description tamanho={440}>
                 Cerca de 1 ano experiencia em Desenvolvimento Web, utilizando
                 das mais novas tecnologias do mercado (React, Nodejs, Go,
                 MongoDB, etc..), cursando Ciência da computação (UniCEUB),
@@ -40,7 +38,7 @@ const infoCard = () => {
             </FlexColumn>
           </div>
 
-          <Flex>
+          <IconSet>
             <IconGroup>
               <p>Skills</p>
               <div>
@@ -93,7 +91,7 @@ const infoCard = () => {
                 <i className="fas fa-envelope"></i>
               </div>
             </IconGroup>
-          </Flex>
+          </IconSet>
         </CardInfo>
       </Card>
     </Container>

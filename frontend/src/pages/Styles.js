@@ -9,7 +9,31 @@ const cssVariables = {
   navItemSize: "1.1em",
   cardGradient: `transparent linear-gradient(180deg, #29c6e2 0%, #0077c7 100%) 0%
   0% no-repeat padding-box;`,
-  overlayColor: "rgba(0, 0, 0, 0.2)"
+  overlayColor: "rgba(0, 0, 0, 0.2)",
+  mediumMedia: {
+    titleSize: "1.5em"
+  }
+};
+
+const size = {
+  mobileS: "320px",
+  mobileM: "375px",
+  mobileL: "425px",
+  tablet: "768px",
+  laptop: "1080px",
+  laptopL: "1440px",
+  desktop: "2560px"
+};
+
+const devices = {
+  mobileS: `(max-width: ${size.mobileS})`,
+  mobileM: `(max-width: ${size.mobileM})`,
+  mobileL: `(max-width: ${size.mobileL})`,
+  tablet: `(max-width: ${size.tablet})`,
+  laptop: `(max-width: ${size.laptop})`,
+  laptopL: `(max-width: ${size.laptopL})`,
+  desktop: `(max-width: ${size.desktop})`,
+  desktopL: `(max-width: ${size.desktop})`
 };
 
 //Utilitys
@@ -21,11 +45,6 @@ export const Flex = styled.div`
 export const FlexColumn = styled.div`
   display: flex;
   flex-direction: column;
-`;
-
-export const FlexBetween = styled.div`
-  display: flex;
-  justify-content: space-between;
 `;
 
 export const Heart = styled.span`
@@ -46,8 +65,12 @@ export const Icons = styled.div`
 
 export const Container = styled.div`
   width: 100%;
-  max-width: 950px;
+  max-width: 1080px;
   margin: 0 auto;
+
+  @media ${devices.laptopL} {
+    width: 90%;
+  }
 `;
 
 //Nav
@@ -84,6 +107,12 @@ export const Card = styled.div`
   background: ${cssVariables.white};
   border-radius: 8px;
   box-shadow: 0 10px 15px 0 rgba(206, 206, 206, 0.6);
+
+  @media ${devices.laptop} {
+  }
+
+  @media (max-width: 650px) {
+  }
 `;
 
 export const CardBackground = styled.div`
@@ -93,25 +122,48 @@ export const CardBackground = styled.div`
   background-size: 120%;
   background-repeat: no-repeat;
   border-radius: 8px 8px 0px 0px;
-`;
 
-export const Overlay = styled.div`
-  background-color: ${cssVariables.overlayColor};
-  background-size: 100%;
-  height: ${props => `${props.height}px`};
-  border-radius: 10px 10px 0px 0px;
+  @media ${devices.tablet} {
+    background-size: 165%;
+  }
+
+  @media ${devices.mobileL} {
+    background-size: 190%;
+  }
+
+  @media ${devices.mobileM} {
+    /* MUDAR BACKGROUND*/
+    background-size: 220%;
+  }
 `;
 
 export const CardInfo = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 50px;
+  padding: 50px 70px 70px 70px;
+
+  @media ${devices.laptop} {
+    padding: 50px 80px 70px 80px;
+    flex-direction: column;
+  }
+
+  @media ${devices.tablet} {
+    padding: 40px 60px 60px 60px;
+  }
+
+  @media ${devices.mobileL} {
+    padding: 40px 45px 60px 45px;
+  }
 `;
 
 export const Name = styled.p`
   font-weight: bold;
   font-size: ${cssVariables.titleSize};
   color: ${cssVariables.textColor};
+
+  @media ${devices.laptop} {
+    font-size: ${cssVariables.mediumMedia.titleSize};
+  }
 `;
 
 export const PersonalInfo = styled.div`
@@ -125,6 +177,10 @@ export const PersonalInfo = styled.div`
 export const Description = styled.p`
   font-family: "Roboto", sans-serif;
   max-width: ${props => `${props.tamanho}px`};
+
+  @media ${devices.laptop} {
+    max-width: 100%;
+  }
 `;
 
 export const IconGroup = styled.div`
@@ -142,6 +198,25 @@ export const IconGroup = styled.div`
     text-align: end;
     color: ${cssVariables.textColor};
   }
+
+  @media ${devices.laptop} {
+    margin-top: 25px;
+
+    p {
+      text-align: start;
+    }
+    i {
+      margin: 8px 8px 0 0;
+    }
+  }
+`;
+
+export const IconSet = styled.div`
+  display: flex;
+
+  @media ${devices.tablet} {
+    flex-direction: column;
+  }
 `;
 
 //Search
@@ -154,6 +229,10 @@ export const SearchBar = styled.form`
     padding: 15px 15px;
     width: 290px;
     border-radius: 0px 5px 5px 0px;
+
+    @media ${devices.mobileL} {
+      width: 100%;
+    }
   }
 `;
 
@@ -176,6 +255,15 @@ export const CustomRepositories = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 35px;
+
+  @media ${devices.laptop} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media ${devices.tablet} {
+    grid-template-columns: 1fr;
+    grid-gap: 40px;
+  }
 `;
 
 export const Repositorie = styled.div`
@@ -183,21 +271,25 @@ export const Repositorie = styled.div`
   border-radius: 8px;
   box-shadow: ${cssVariables.cardShadow};
   transition: all 0.35s ease;
-  height: 420px;
+  height: 100%;
+  max-height: 450px;
   overflow: hidden;
 
   &:hover {
     box-shadow: ${cssVariables.cardShadowHover};
   }
 
-  h3 {
-    color: ${cssVariables.textColor};
-    font-weight: 700;
+  @media ${devices.tablet} {
+    height: 390px;
+  }
+
+  @media ${devices.mobileL} {
+    height: 430px;
   }
 `;
 
 export const RepositorieBackground = styled.div`
-  background: ${cssVariables.cardGradient};
+  background: url(${props => props.noise}), ${props => `${props.background}`}; 
   height: 170px;
   border-radius: 8px 8px 0px 0px;
 `;
@@ -205,30 +297,43 @@ export const RepositorieBackground = styled.div`
 export const RepoTitle = styled.h3`
   font-family: "Poppins", sans-serif;
   font-size: ${cssVariables.titleSize};
+  color: ${cssVariables.textColor};
+  font-weight: 600;
+
+  @media ${devices.tablet} {
+    font-size: 1.4em;
+  }
 `;
 
 export const RepoInfo = styled.div`
-  padding: 30px 25px 10px 25px;
+  padding: 38px;
 `;
 
 export const RepoDesc = styled.p`
   font-family: "Roboto", sans-serif;
   margin-top: 15px;
-  font-weight: 400;
 `;
 
 export const Tags = styled.div`
-  margin: 5px 0 0 0;
+  margin: 5px 0;
+  @media ${devices.tablet} {
+    margin: 10px 0 0 0;
+  }
 `;
 
 export const Tag = styled.span`
   color: white;
-  background: #5fd5e8;
+  background: ${props => `${props.tagColor}`};
   padding: 2px 15px;
   border-radius: 12px;
   font-size: 0.8em;
   font-weight: bold;
   margin-right: 5px;
+
+  @media ${devices.tablet} {
+    font-size: 0.9em;
+    padding: 3px 20px;
+  }
 `;
 //Footer
 
@@ -236,4 +341,19 @@ export const MyFooter = styled.footer`
   background: ${cssVariables.white};
   margin-top: 70px;
   padding: 35px;
+
+  p {
+    @media ${devices.mobileL} {
+      margin-top: 15px;
+    }
+  }
+`;
+
+export const FooterContent = styled.div`
+  display: flex;
+  justify-content: space-between;
+
+  @media ${devices.mobileL} {
+    flex-direction: column;
+  }
 `;

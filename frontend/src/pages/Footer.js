@@ -1,11 +1,11 @@
 import React from "react";
-import { Container, MyFooter, FlexBetween, Heart, Icons } from "./Styles";
+import { Container, MyFooter, FooterContent, Heart, Icons } from "./Styles";
 
 function Footer() {
   return (
     <MyFooter>
       <Container>
-        <FlexBetween>
+        <FooterContent>
           <Icons>
             <i className="fab fa-discord"></i>
             <i className="fab fa-linkedin"></i>
@@ -19,7 +19,7 @@ function Footer() {
             </Heart>{" "}
             by Vinícius Alves
           </p>
-        </FlexBetween>
+        </FooterContent>
       </Container>
     </MyFooter>
   );

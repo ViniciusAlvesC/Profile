@@ -3,7 +3,6 @@ import {
   Container,
   Card,
   CardBackground,
-  Overlay,
   CardInfo,
   Name,
   PersonalInfo,
@@ -16,15 +15,19 @@ function Design() {
   return (
     <Container>
       <Card>
-        <CardBackground img={designCardBackground} height={350}>
-        </CardBackground>
+        <CardBackground
+          img={designCardBackground}
+          height={350}
+        ></CardBackground>
 
         <CardInfo>
           <div>
             <Name>Design Projects</Name>
 
             <PersonalInfo>
-              <span>Meus Projetos de design</span>
+              <span>Illustrator | Photoshop | Gimp</span>
+              <span>Adobe XD | Figma</span>
+              <span>After Effects | Premiere</span>
             </PersonalInfo>
 
             <Description tamanho={440}>
