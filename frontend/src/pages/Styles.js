@@ -76,7 +76,7 @@ export const Container = styled.div`
 //Nav
 
 export const Head = styled.header`
-  padding: 30px 10%;
+  padding: 30px;
   background: ${cssVariables.white};
   box-shadow: 0 7px 15px -4px rgb(206, 206, 206);
 `;
