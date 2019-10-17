@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const cssVariables = {
   containerSize: "100%",
-  cardBackgroundColor: "#1a1a1a",
+  cardBackgroundColor: "#1d1d1d",
   white: "#fdfdff",
   heart: "#ff4848",
   titleSize: "1.3em",
