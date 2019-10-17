@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Head, Navbar, NavItem } from "./Styles";
-import logo from "../assets/logodef.svg";
+import logo from "../assets/iconmin.svg";
 
 const Nav = () => {
   return (

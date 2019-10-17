@@ -10,6 +10,7 @@ import {
   Tags,
   Tag
 } from "./Styles";
+
 import Axios from "axios";
 import noise from "../assets/noise.png"
 
@@ -34,6 +35,8 @@ function Repositories() {
     setRepo({
       repos: repos
     });
+
+    console.log(repos)
   };
 
   const renderCards = () => {

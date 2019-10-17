@@ -17,7 +17,7 @@ function Design() {
       <Card>
         <CardBackground
           img={designCardBackground}
-          height={350}
+          height={300}
         ></CardBackground>
 
         <CardInfo>

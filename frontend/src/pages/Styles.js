@@ -1,17 +1,22 @@
 import styled from "styled-components";
 
 const cssVariables = {
-  textColor: "#1e1e1e",
-  cardShadow: "0 10px 15px 0 rgba(206, 206, 206, 0.6)",
-  cardShadowHover: "0 18px 25px 0 rgb(197, 197, 197)",
+  containerSize: "100%",
+  cardBackgroundColor: "#1a1a1a",
   white: "#fdfdff",
+  heart: "#ff4848",
   titleSize: "1.3em",
   navItemSize: "1.1em",
   cardGradient: `transparent linear-gradient(180deg, #29c6e2 0%, #0077c7 100%) 0%
   0% no-repeat padding-box;`,
-  overlayColor: "rgba(0, 0, 0, 0.2)",
+  buttonColor: "#424242",
+  buttonRadius: "0 5px 5px 0",
+  inputRadius: "5px 0 0 5px",
+  gridGap: "35px;",
   mediumMedia: {
-    titleSize: "1.5em"
+    titleSize: "1.5em",
+    containerSize: "90%",
+    gridGap: "40px"
   }
 };
 
@@ -49,14 +54,14 @@ export const FlexColumn = styled.div`
 
 export const Heart = styled.span`
   i {
-    color: #ff4848;
+    color: ${cssVariables.heart};
   }
 `;
 
 export const Icons = styled.div`
   i {
     font-size: 1.5em;
-    color: ${cssVariables.textColor};
+    color: ${cssVariables.white};
     margin-right: 15px;
   }
 `;
@@ -64,12 +69,12 @@ export const Icons = styled.div`
 //Container
 
 export const Container = styled.div`
-  width: 100%;
+  width: ${cssVariables.containerSize};
   max-width: 1080px;
   margin: 0 auto;
 
   @media ${devices.laptopL} {
-    width: 90%;
+    width: ${cssVariables.mediumMedia.containerSize};
   }
 `;
 
@@ -77,8 +82,7 @@ export const Container = styled.div`
 
 export const Head = styled.header`
   padding: 30px;
-  background: ${cssVariables.white};
-  box-shadow: 0 7px 15px -4px rgb(206, 206, 206);
+  background: ${cssVariables.cardBackgroundColor};
 `;
 
 export const Navbar = styled.div`
@@ -93,8 +97,8 @@ export const NavItem = styled.ul`
     padding: 0px 20px;
   }
   li a {
-    font-weight: 500;
-    color: ${cssVariables.textColor};
+    font-weight: 700;
+    color: ${cssVariables.white};
     font-family: "Roboto", sans-serif;
     font-size: ${cssVariables.navItemSize};
   }
@@ -104,36 +108,29 @@ export const NavItem = styled.ul`
 
 export const Card = styled.div`
   margin-top: 50px;
-  background: ${cssVariables.white};
+  background: ${cssVariables.cardBackgroundColor};
   border-radius: 8px;
-  box-shadow: 0 10px 15px 0 rgba(206, 206, 206, 0.6);
-
-  @media ${devices.laptop} {
-  }
-
-  @media (max-width: 650px) {
-  }
 `;
 
 export const CardBackground = styled.div`
   background: url(${props => props.img});
   height: ${props => `${props.height}px`};
   background-position: center;
-  background-size: 120%;
+  background-size: 110%;
   background-repeat: no-repeat;
   border-radius: 8px 8px 0px 0px;
 
   @media ${devices.tablet} {
-    background-size: 165%;
+    background-size: 145%;
   }
 
   @media ${devices.mobileL} {
-    background-size: 190%;
+    background-size: 165%;
   }
 
   @media ${devices.mobileM} {
     /* MUDAR BACKGROUND*/
-    background-size: 220%;
+    background-size: 195%;
   }
 `;
 
@@ -159,7 +156,7 @@ export const CardInfo = styled.div`
 export const Name = styled.p`
   font-weight: bold;
   font-size: ${cssVariables.titleSize};
-  color: ${cssVariables.textColor};
+  color: ${cssVariables.white};
 
   @media ${devices.laptop} {
     font-size: ${cssVariables.mediumMedia.titleSize};
@@ -168,6 +165,7 @@ export const Name = styled.p`
 
 export const PersonalInfo = styled.div`
   font-family: "Nunito", sans-serif;
+  color: ${cssVariables.white};
   font-weight: 300;
   margin: 10px 0;
   display: flex;
@@ -177,6 +175,7 @@ export const PersonalInfo = styled.div`
 export const Description = styled.p`
   font-family: "Roboto", sans-serif;
   max-width: ${props => `${props.tamanho}px`};
+  color: ${cssVariables.white};
 
   @media ${devices.laptop} {
     max-width: 100%;
@@ -189,14 +188,14 @@ export const IconGroup = styled.div`
   i {
     font-size: 1.4em;
     margin: 8px 0 0 8px;
-    color: ${cssVariables.textColor};
+    color: ${cssVariables.white};
   }
 
   p {
     font-weight: bold;
     font-size: 0.96em;
     text-align: end;
-    color: ${cssVariables.textColor};
+    color: ${cssVariables.white};
   }
 
   @media ${devices.laptop} {
@@ -223,12 +222,18 @@ export const IconSet = styled.div`
 
 export const SearchBar = styled.form`
   margin: 45px 0;
-
-  input {
+  
+  input[type="text"], text {
+    display: flex;
+    align-items: center;
     border: none;
-    padding: 15px 15px;
+    padding-left: 15px;
+    height: 50px;
     width: 290px;
-    border-radius: 0px 5px 5px 0px;
+    font-size: 0.9em;
+    border-radius: ${cssVariables.inputRadius};
+    color: ${cssVariables.white};
+    background: ${cssVariables.cardBackgroundColor};
 
     @media ${devices.mobileL} {
       width: 100%;
@@ -241,12 +246,15 @@ export const SearchInput = styled.div`
   align-items: center;
 `;
 
-export const SearchIcon = styled.div`
-  i {
-    padding: 15px;
-    background: ${cssVariables.white};
-    border-radius: 5px 0px 0px 5px;
-  }
+export const MyButton = styled.button`
+  background: ${cssVariables.buttonColor};
+  color: ${cssVariables.white};
+  font-size: 1em;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: ${cssVariables.buttonRadius};
+  cursor: pointer;
 `;
 
 //Repositories
@@ -254,7 +262,7 @@ export const SearchIcon = styled.div`
 export const CustomRepositories = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 35px;
+  grid-gap: ${cssVariables.gridGap};
 
   @media ${devices.laptop} {
     grid-template-columns: repeat(2, 1fr);
@@ -262,22 +270,17 @@ export const CustomRepositories = styled.div`
 
   @media ${devices.tablet} {
     grid-template-columns: 1fr;
-    grid-gap: 40px;
+    grid-gap: ${cssVariables.mediumMedia.gridGap};
   }
 `;
 
 export const Repositorie = styled.div`
-  background-color: ${cssVariables.white};
+  background-color: ${cssVariables.cardBackgroundColor};
   border-radius: 8px;
-  box-shadow: ${cssVariables.cardShadow};
   transition: all 0.35s ease;
   height: 100%;
   max-height: 450px;
   overflow: hidden;
-
-  &:hover {
-    box-shadow: ${cssVariables.cardShadowHover};
-  }
 
   @media ${devices.tablet} {
     height: 390px;
@@ -289,7 +292,7 @@ export const Repositorie = styled.div`
 `;
 
 export const RepositorieBackground = styled.div`
-  background: url(${props => props.noise}), ${props => `${props.background}`}; 
+  background: url(${props => props.noise}), ${props => `${props.background}`};
   height: 170px;
   border-radius: 8px 8px 0px 0px;
 `;
@@ -297,7 +300,7 @@ export const RepositorieBackground = styled.div`
 export const RepoTitle = styled.h3`
   font-family: "Poppins", sans-serif;
   font-size: ${cssVariables.titleSize};
-  color: ${cssVariables.textColor};
+  color: ${cssVariables.white};
   font-weight: 600;
 
   @media ${devices.tablet} {
@@ -312,6 +315,7 @@ export const RepoInfo = styled.div`
 export const RepoDesc = styled.p`
   font-family: "Roboto", sans-serif;
   margin-top: 15px;
+  color: ${cssVariables.white};
 `;
 
 export const Tags = styled.div`
@@ -338,7 +342,7 @@ export const Tag = styled.span`
 //Footer
 
 export const MyFooter = styled.footer`
-  background: ${cssVariables.white};
+  background: ${cssVariables.cardBackgroundColor};
   margin-top: 70px;
   padding: 35px;
 
@@ -352,6 +356,10 @@ export const MyFooter = styled.footer`
 export const FooterContent = styled.div`
   display: flex;
   justify-content: space-between;
+
+  p {
+    color: ${cssVariables.white}
+  }
 
   @media ${devices.mobileL} {
     flex-direction: column;
