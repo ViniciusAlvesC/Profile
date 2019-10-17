@@ -1,0 +1,125 @@
+
+> node@12.12.0 preinstall /home/vini/Desktop/ProfileSite/frontend/node_modules/.staging/node-06daacd9
+> node installArchSpecificPackage
+
+- @babel/core node_modules/@babel/plugin-syntax-dynamic-import/node_modules/@babel/core
+- @babel/core node_modules/@babel/plugin-transform-destructuring/node_modules/@babel/core
+- @babel/core node_modules/@babel/plugin-transform-react-display-name/node_modules/@babel/core
+- @babel/core node_modules/babel-jest/node_modules/@babel/core
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/plugin-proposal-async-generator-functions/node_modules/@babel/core
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/plugin-proposal-dynamic-import/node_modules/@babel/core
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/plugin-proposal-json-strings/node_modules/@babel/core
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/plugin-proposal-optional-catch-binding/node_modules/@babel/core
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/plugin-proposal-unicode-property-regex/node_modules/@babel/core
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/plugin-syntax-async-generators/node_modules/@babel/core
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/plugin-syntax-json-strings/node_modules/@babel/core
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/plugin-syntax-optional-catch-binding/node_modules/@babel/core
+- @babel/plugin-transform-arrow-functions node_modules/babel-preset-react-app/node_modules/@babel/plugin-transform-arrow-functions
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/plugin-transform-arrow-functions/node_modules/@babel/core
+- @babel/plugin-transform-async-to-generator node_modules/babel-preset-react-app/node_modules/@babel/plugin-transform-async-to-generator
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/plugin-transform-async-to-generator/node_modules/@babel/core
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/plugin-transform-block-scoped-functions/node_modules/@babel/core
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/plugin-transform-block-scoping/node_modules/@babel/core
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/plugin-transform-classes/node_modules/@babel/core
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/plugin-transform-computed-properties/node_modules/@babel/core
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/plugin-transform-dotall-regex/node_modules/@babel/core
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/plugin-transform-duplicate-keys/node_modules/@babel/core
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/plugin-transform-exponentiation-operator/node_modules/@babel/core
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/plugin-transform-for-of/node_modules/@babel/core
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/plugin-transform-function-name/node_modules/@babel/core
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/plugin-transform-literals/node_modules/@babel/core
+- @babel/plugin-transform-member-expression-literals node_modules/babel-preset-react-app/node_modules/@babel/plugin-transform-member-expression-literals
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/plugin-transform-member-expression-literals/node_modules/@babel/core
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/plugin-transform-modules-amd/node_modules/@babel/core
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/plugin-transform-modules-commonjs/node_modules/@babel/core
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/plugin-transform-modules-systemjs/node_modules/@babel/core
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/plugin-transform-modules-umd/node_modules/@babel/core
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/plugin-transform-named-capturing-groups-regex/node_modules/@babel/core
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/plugin-transform-new-target/node_modules/@babel/core
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/plugin-transform-object-super/node_modules/@babel/core
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/plugin-transform-parameters/node_modules/@babel/core
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/plugin-transform-property-literals/node_modules/@babel/core
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/plugin-transform-regenerator/node_modules/@babel/core
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/plugin-transform-reserved-words/node_modules/@babel/core
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/plugin-transform-shorthand-properties/node_modules/@babel/core
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/plugin-transform-spread/node_modules/@babel/core
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/plugin-transform-sticky-regex/node_modules/@babel/core
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/plugin-transform-typeof-symbol/node_modules/@babel/core
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/plugin-transform-unicode-regex/node_modules/@babel/core
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/preset-env/node_modules/@babel/plugin-proposal-object-rest-spread/node_modules/@babel/core
+- @babel/core node_modules/babel-preset-react-app/node_modules/@babel/preset-react/node_modules/@babel/core
+- @babel/generator node_modules/styled-components/node_modules/@babel/generator
+frontend@0.1.0 /home/vini/Desktop/ProfileSite/frontend
+├── 2@2.0.0  extraneous
+├─┬ react-scripts@3.2.0
+│ ├─┬ @babel/core@7.6.0
+│ │ ├─┬ @babel/generator@7.6.2
+│ │ │ └── source-map@0.5.7 
+│ │ ├─┬ debug@4.1.1 
+│ │ │ └── ms@2.1.2 
+│ │ └── source-map@0.5.7 
+│ ├─┬ @svgr/webpack@4.3.2
+│ │ ├─┬ @babel/core@7.6.2
+│ │ │ ├─┬ debug@4.1.1 
+│ │ │ │ └── ms@2.1.2 
+│ │ │ └── source-map@0.5.7 
+│ │ └─┬ @svgr/plugin-svgo@4.3.1
+│ │   └─┬ svgo@1.3.0
+│ │     ├─┬ css-tree@1.0.0-alpha.33
+│ │     │ └── source-map@0.5.7 
+│ │     └─┬ csso@3.5.1
+│ │       └─┬ css-tree@1.0.0-alpha.29
+│ │         └── source-map@0.5.7 
+│ ├─┬ babel-eslint@10.0.3
+│ │ └─┬ @babel/traverse@7.6.2
+│ │   └─┬ debug@4.1.1 
+│ │     └── ms@2.1.2 
+│ ├─┬ babel-preset-react-app@9.0.2
+│ │ └─┬ @babel/core@7.6.0
+│ │   ├─┬ debug@4.1.1 
+│ │   │ └── ms@2.1.2 
+│ │   └── source-map@0.5.7 
+│ ├─┬ eslint@6.5.1
+│ │ └─┬ debug@4.1.1 
+│ │   └── ms@2.1.2 
+│ ├─┬ jest@24.9.0
+│ │ └─┬ jest-cli@24.9.0
+│ │   └─┬ @jest/core@24.9.0
+│ │     └─┬ @jest/reporters@24.9.0
+│ │       └─┬ istanbul-lib-source-maps@3.0.6
+│ │         └─┬ debug@4.1.1 
+│ │           └── ms@2.1.2 
+│ ├─┬ react-dev-utils@9.1.0
+│ │ └─┬ sockjs-client@1.4.0
+│ │   └─┬ debug@3.2.6
+│ │     └── ms@2.1.2 
+│ ├─┬ webpack@4.41.0
+│ │ └─┬ micromatch@3.1.10
+│ │   └─┬ snapdragon@0.8.2
+│ │     └── source-map@0.5.7 
+│ └─┬ webpack-dev-server@3.2.1
+│   ├─┬ debug@4.1.1 
+│   │ └── ms@2.1.2 
+│   ├─┬ http-proxy-middleware@0.19.1
+│   │ └─┬ http-proxy@1.18.0
+│   │   └─┬ follow-redirects@1.9.0
+│   │     └─┬ debug@3.2.6
+│   │       └── ms@2.1.2 
+│   ├─┬ sockjs-client@1.3.0
+│   │ └─┬ debug@3.2.6
+│   │   └── ms@2.1.2 
+│   └─┬ spdy@4.0.1
+│     ├─┬ debug@4.1.1 
+│     │ └── ms@2.1.2 
+│     └─┬ spdy-transport@3.0.0
+│       └─┬ debug@4.1.1 
+│         └── ms@2.1.2 
+└─┬ styled-components@4.4.0  invalid
+  └─┬ @babel/traverse@7.6.3 
+    ├─┬ @babel/generator@7.6.4 
+    │ └── source-map@0.5.7 
+    ├── @babel/parser@7.6.4 
+    ├── @babel/types@7.6.3 
+    └─┬ debug@4.1.1 
+      └── ms@2.1.2 
+

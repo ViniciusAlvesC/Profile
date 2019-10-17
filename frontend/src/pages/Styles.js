@@ -278,10 +278,14 @@ export const CustomRepositories = styled.div`
 export const Repositorie = styled.div`
   background-color: ${cssVariables.cardBackgroundColor};
   border-radius: 8px;
-  transition: all 0.35s ease;
   height: 100%;
   max-height: 450px;
   overflow: hidden;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.06, 1.06);
+  }
 
   @media ${devices.tablet} {
     height: 390px;

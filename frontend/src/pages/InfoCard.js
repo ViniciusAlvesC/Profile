@@ -13,7 +13,8 @@ import {
 } from "./Styles";
 import infoCardBackground from "../assets/profileBg.svg";
 
-const infoCard = () => {
+const InfoCard = () => {
+
   return (
     <Container>
       <Card>
@@ -98,4 +99,4 @@ const infoCard = () => {
   );
 };
 
-export default infoCard;
+export default InfoCard;

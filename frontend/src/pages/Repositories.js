@@ -11,7 +11,6 @@ import {
   Tag,
   SpiningIcon
 } from "./Styles";
-
 import api from "../services/api";
 import noise from "../assets/noise.png";
 
