@@ -17,7 +17,7 @@ const infoCard = () => {
   return (
     <Container>
       <Card>
-        <CardBackground height={300} img={infoCardBackground}></CardBackground>
+        <CardBackground height={260} img={infoCardBackground}></CardBackground>
 
         <CardInfo>
           <div>

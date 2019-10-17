@@ -116,21 +116,21 @@ export const CardBackground = styled.div`
   background: url(${props => props.img});
   height: ${props => `${props.height}px`};
   background-position: center;
-  background-size: 110%;
+  background-size: 105%;
   background-repeat: no-repeat;
   border-radius: 8px 8px 0px 0px;
 
   @media ${devices.tablet} {
-    background-size: 145%;
+    background-size: 125%;
   }
 
   @media ${devices.mobileL} {
-    background-size: 165%;
+    background-size: 140%;
   }
 
   @media ${devices.mobileM} {
     /* MUDAR BACKGROUND*/
-    background-size: 195%;
+    background-size: 175%;
   }
 `;
 
@@ -222,8 +222,9 @@ export const IconSet = styled.div`
 
 export const SearchBar = styled.form`
   margin: 45px 0;
-  
-  input[type="text"], text {
+
+  input[type="text"],
+  text {
     display: flex;
     align-items: center;
     border: none;
@@ -358,10 +359,29 @@ export const FooterContent = styled.div`
   justify-content: space-between;
 
   p {
-    color: ${cssVariables.white}
+    color: ${cssVariables.white};
   }
 
   @media ${devices.mobileL} {
     flex-direction: column;
+  }
+`;
+
+export const SpiningIcon = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  i {
+    color: ${cssVariables.white};
+    font-size: 3em;
+  }
+
+  p {
+    margin-top: 18px;
+    text-align: center;
+    font-size: 1.3em;
+    color: ${cssVariables.white};
   }
 `;

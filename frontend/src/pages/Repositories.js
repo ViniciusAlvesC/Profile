@@ -8,15 +8,20 @@ import {
   RepoDesc,
   RepoTitle,
   Tags,
-  Tag
+  Tag,
+  SpiningIcon
 } from "./Styles";
 
-import Axios from "axios";
-import noise from "../assets/noise.png"
+import api from "../services/api";
+import noise from "../assets/noise.png";
 
 function Repositories() {
   const [repo, setRepo] = useState({
     repos: []
+  });
+
+  const [loading, setLoading] = useState({
+    loading: false
   });
 
   useEffect(() => {
@@ -24,9 +29,7 @@ function Repositories() {
   }, []);
 
   const searchRepo = async () => {
-    const response = await Axios.get(
-      "https://api.github.com/users/ViniciusAlvesC/repos"
-    );
+    const response = await api.get("/repos");
     const repos = [];
     response.data.map(repo => {
       return repos.push(repo);
@@ -36,7 +39,9 @@ function Repositories() {
       repos: repos
     });
 
-    console.log(repos)
+    setLoading({
+      loading: true
+    });
   };
 
   const renderCards = () => {
@@ -88,7 +93,14 @@ function Repositories() {
 
   return (
     <Container>
-      <CustomRepositories>{renderCards()}</CustomRepositories>
+      {loading.loading ? (
+        <CustomRepositories>{renderCards()}</CustomRepositories>
+      ) : (
+        <SpiningIcon>
+          <i class="fas fa-circle-notch fa-spin"></i>
+          <p>Loading Repositories</p>
+        </SpiningIcon>
+      )}
     </Container>
   );
 }
