@@ -1,5 +1,4 @@
 const axios = require("axios");
-const repositories = [];
 
 module.exports = {
   async gituser(req, res) {
@@ -13,7 +12,8 @@ module.exports = {
         id: repo.id,
         name: repo.name,
         description: repo.description,
-        language: repo.language
+        language: repo.language,
+        repo_url: repo.html_url
       };
 
     });

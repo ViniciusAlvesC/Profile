@@ -16,13 +16,9 @@ import api from "../services/api";
 import noise from "../assets/noise.png";
 
 function Repositories() {
-  const [repo, setRepo] = useState({
-    repos: []
-  });
+  const [repo, setRepo] = useState([]);
 
-  const [loading, setLoading] = useState({
-    loading: false
-  });
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     searchRepo();
@@ -30,22 +26,14 @@ function Repositories() {
 
   const searchRepo = async () => {
     const response = await api.get("/repos");
-    const repos = [];
-    response.data.map(repo => {
-      return repos.push(repo);
-    });
 
-    setRepo({
-      repos: repos
-    });
+    setRepo(response.data);
 
-    setLoading({
-      loading: true
-    });
+    setLoading(true);
   };
 
   const renderCards = () => {
-    const cards = repo.repos.map(repo => {
+    const cards = repo.map(repo => {
       let gradient = "";
       let color = "";
 
@@ -70,14 +58,14 @@ function Repositories() {
 
       return (
         <Repositorie key={repo.id}>
-          <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
+          <a href={repo.repo_url} target="_blank" rel="noopener noreferrer">
             <RepositorieBackground
               background={gradient}
               noise={noise}
             ></RepositorieBackground>
           </a>
           <RepoInfo>
-            <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
+            <a href={repo.url} target="_blank" rel="noopener noreferrer">
               <RepoTitle>{repo.name}</RepoTitle>
             </a>
             <Tags>
@@ -93,11 +81,11 @@ function Repositories() {
 
   return (
     <Container>
-      {loading.loading ? (
+      {loading ? (
         <CustomRepositories>{renderCards()}</CustomRepositories>
       ) : (
         <SpiningIcon>
-          <i class="fas fa-circle-notch fa-spin"></i>
+          <i className="fas fa-circle-notch fa-spin"></i>
           <p>Loading Repositories</p>
         </SpiningIcon>
       )}

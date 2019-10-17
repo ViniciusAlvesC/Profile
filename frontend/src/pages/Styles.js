@@ -372,10 +372,11 @@ export const SpiningIcon = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 350px;
 
   i {
     color: ${cssVariables.white};
-    font-size: 3em;
+    font-size: 2.5em;
   }
 
   p {
