@@ -64,7 +64,7 @@ function Repositories() {
             ></RepositorieBackground>
           </a>
           <RepoInfo>
-            <a href={repo.url} target="_blank" rel="noopener noreferrer">
+            <a href={repo.repo_url} target="_blank" rel="noopener noreferrer">
               <RepoTitle>{repo.name}</RepoTitle>
             </a>
             <Tags>

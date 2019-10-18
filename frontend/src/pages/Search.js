@@ -1,12 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container, SearchBar, SearchInput, MyButton } from "./Styles";
 
 const Search = () => {
-
-  const { repositorie, setRepositorie } = useState({
-    repo: "",
-    term: ""
-  })
 
   return (
     <Container>
